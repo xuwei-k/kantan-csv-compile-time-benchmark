@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        project: ["a1", "a2"]
+        project: ["a1", "a2", "a3", "a4"]
     steps:
     - uses: actions/checkout@v4
     - uses: sbt/setup-sbt@v1
