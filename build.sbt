@@ -33,7 +33,13 @@ def gen(imports: String) = {
 val a1 = project
   .settings(
     common,
-    gen("import kantan.csv.generic._")
+    gen(
+      Seq(
+        "import kantan.csv.generic.hnilRowEncoder",
+        "import kantan.csv.generic.hlistRowEncoder",
+        "import kantan.csv.generic.caseClassEncoder"
+      ).mkString("\n")
+    )
   )
   .dependsOn(x1)
 
