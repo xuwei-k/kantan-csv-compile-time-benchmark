@@ -37,6 +37,7 @@ val a1 = project
       Seq(
         "import kantan.csv.generic.hnilRowEncoder",
         "import kantan.csv.generic.hlistRowEncoder",
+        "import kantan.csv.generic.caseClassEncoderFromLabelled",
         "import kantan.csv.generic.caseClassEncoder"
       ).mkString("\n")
     )
