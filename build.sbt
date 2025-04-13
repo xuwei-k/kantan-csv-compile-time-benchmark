@@ -33,39 +33,9 @@ def gen(imports: String) = {
 val a1 = project
   .settings(
     common,
-    gen("import example.MyGeneric._")
-  )
-  .dependsOn(x1)
-
-val a2 = project
-  .settings(
-    common,
-    gen("import kantan.csv.generic._")
-  )
-  .dependsOn(x1)
-
-val a3 = project
-  .settings(
-    common,
     gen(
       Seq(
-        "import kantan.csv.generic.hnilRowEncoder",
-        "import kantan.csv.generic.hlistRowEncoder",
-        "import kantan.csv.generic.caseClassEncoderFromLabelled",
-        "import kantan.csv.generic.caseClassEncoder"
-      ).mkString("\n")
-    )
-  )
-  .dependsOn(x1)
-
-val a4 = project
-  .settings(
-    common,
-    gen(
-      Seq(
-        "import kantan.csv.generic.hnilRowEncoder",
-        "import kantan.csv.generic.hlistRowEncoder",
-        "import kantan.csv.generic.caseClassEncoder"
+        "import example.MyOverrideGeneric._"
       ).mkString("\n")
     )
   )
